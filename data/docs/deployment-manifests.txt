@@ -1,0 +1,18 @@
+apiVersion: aether.cloudscale.io/v1
+kind: AetherService
+metadata:
+  name: payment-processor
+spec:
+  # The traffic selector
+  selector:
+    app: payments
+  # Resiliency settings
+  resiliency:
+    retries: 5
+    backoff: exponential
+    timeout: 300ms 
+    # NOTE: Does this timeout include the retry duration? 
+    # The docs say yes, but @jchen's PR says no. Testing needed.
+  security:
+    mtls: strict
+    identity: payments-internal-sa

@@ -1,0 +1,6 @@
+Active Issues and Technical Debt
+
+1. BUG #402: Memory leak in the retry logic when the upstream service returns a 504. Current mitigation: Periodic ghost-kill cronjobs.
+2. TODO: Implement WebSockets support. Currently, Aether drops all long-lived TCP connections after 10 minutes.
+3. WONTFIX: The CLI terminal output colors are hardcoded for dark mode. If you use a light theme, the text is invisible.
+4. URGENT: The aether-brain occasionally loses sync with the K8s API during rolling updates.

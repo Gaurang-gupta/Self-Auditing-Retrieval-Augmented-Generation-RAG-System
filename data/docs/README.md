@@ -1,0 +1,3 @@
+Project Aether: The CloudScale Connectivity Layer Aether is our internal service mesh and API toolkit, designed to abstract away the complexities of the underlying Kubernetes networking stack. It provides a FastAPI-like declaration syntax for high-performance Rust-based proxies.
+
+Core Vision: Developers should focus on business logic, not on how packets move from Service A to Service B. Aether handles the "plumbing" (mTLS, Retries, Circuit Breaking, and Observability) via a sidecar injection model.

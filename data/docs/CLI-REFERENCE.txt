@@ -1,0 +1,8 @@
+AETHER COMMAND LINE INTERFACE v0.9.2
+
+Usage: aether [COMMAND] [ARGS]
+auth login: Authenticates your local machine with the CloudScale SSO.
+pulse check: Performs a 5-point health check on the local data plane.
+warp connect [SERVICE]: [REDACTED/DEPRECATED] This caused a routing loop in production. Use tunnel instead.
+tunnel open [SERVICE] [PORT]: Creates a secure mTLS tunnel to a service in the staging cluster.
+ghost-kill --pod [NAME]: Forces a restart of the sidecar without killing the application container. Use with caution.

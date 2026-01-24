@@ -1,0 +1,5 @@
+[2026-01-23 14:02:01] INFO  aether_proxy::mTLS: Handshake started. Remote: 10.2.4.15
+[2026-01-23 14:02:01] DEBUG aether_proxy::mTLS: SVID verified via Root-CA-01.
+[2026-01-23 14:02:02] INFO  aether_proxy::router: Routing request /v1/billing -> billing-svc:8080
+[2026-01-23 14:02:02] WARN  aether_proxy::resiliency: Upstream timeout. Retrying (1/5)...
+[2026-01-23 14:02:02] INFO  aether_proxy::router: Request completed. Status: 200. Latency: 45ms.

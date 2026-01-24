@@ -1,0 +1,6 @@
+Internal API Guidelines
+
+All JSON responses must use snake_case.
+Error messages must be descriptive but should not leak stack traces.
+Every response must include the X-Aether-Trace-ID header.
+Status Code 418 is reserved for the "Internal Development Sandbox" to indicate a service is currently being live-debugged and should not be relied upon.
