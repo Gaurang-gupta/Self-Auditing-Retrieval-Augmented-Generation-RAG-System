@@ -5,8 +5,17 @@ import json
 import time
 import uuid
 
-def log_event(event: dict):
-    print(json.dumps(event, ensure_ascii=False))
+# Updated log_event function
+def log_event(event):
+    # Convert any float32/int64 types to standard Python types
+    import numpy as np
+
+    # Simple recursive cleaner or just cast specifically:
+    cleaned_event = {
+        k: (float(v) if isinstance(v, (np.float32, np.float64)) else v)
+        for k, v in event.items()
+    }
+    print(json.dumps(cleaned_event, ensure_ascii=False))
 
 app = FastAPI(
     title="Audited RAG System",
